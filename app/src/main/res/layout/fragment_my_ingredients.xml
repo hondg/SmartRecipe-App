@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Ingredients"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#333"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="8dp"/>
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#333"
+            android:layout_below="@id/title"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp"/>
+
+
+        <!-- Floating Action Button Container -->
+        <EditText
+            android:id="@+id/notesEditText"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/separator"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="66dp"
+            android:hint="Enter your notes here" />
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@id/notesEditText"
+           android:layout_marginTop="8dp"
+           android:layout_marginBottom="100dp"
+           android:fillViewport="true">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:padding="16dp">
+
+               <TextView
+                   android:id="@+id/savedNotesTextView"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="" />
+
+
+           </LinearLayout>
+
+       </ScrollView>
+
+
+
+        <LinearLayout
+            android:id="@+id/addButtonContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp">
+
+
+
+            <!-- Floating Action Button -->
+            <Button
+                android:id="@+id/saveNotesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Notes"
+                android:layout_marginTop="8dp"/>
+            <Button
+                android:id="@+id/deleteNotesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete Notes"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
